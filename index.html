@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Pakistan Weather</h1>
+      <p>Search current weather for any city in Pakistan.</p>
+      <form id="searchForm">
+        <label class="sr-only" for="cityInput">Enter a Pakistani city</label>
+        <input
+          type="text"
+          id="cityInput"
+          list="pakistanCities"
+          placeholder="e.g. Lahore, Karachi"
+          autocomplete="off"
+          required
+        />
+        <datalist id="pakistanCities">
+          <option value="Islamabad"></option>
+          <option value="Karachi"></option>
+          <option value="Lahore"></option>
+          <option value="Peshawar"></option>
+          <option value="Quetta"></option>
+          <option value="Multan"></option>
+          <option value="Faisalabad"></option>
+          <option value="Rawalpindi"></option>
+        </datalist>
+        <button type="submit">Search</button>
+      </form>
+      <div class="weather-status" role="status" aria-live="polite"></div>
+      <section
+        class="result"
+        aria-live="polite"
+        aria-label="Current weather"
+      ></section>
+
+      <section class="recent-searches" aria-labelledby="recentHeading">
+        <h2 id="recentHeading">Recent Searches</h2>
+        <ul id="recent"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
